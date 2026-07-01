@@ -1,8 +1,20 @@
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain_community.vectorstores import Chroma
 from dotenv import load_dotenv
+import os
 
+# Load from .env file when running locally
 load_dotenv()
+
+# On Streamlit Cloud, secrets are stored differently
+# This checks Streamlit's secrets system and sets the key
+# as an environment variable so the rest of the code works identically
+try:
+    import streamlit as st
+    if "GOOGLE_API_KEY" in st.secrets:
+        os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+except Exception:
+    pass  # Not running on Streamlit Cloud, ignore
 
 embeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")
 vectorstore = Chroma(persist_directory="chroma_db", embedding_function=embeddings)
