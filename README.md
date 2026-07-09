@@ -1,87 +1,70 @@
-# 🎓 UCER Campus Assistant
+# 🎓 Autonomous Campus Assistant
 
-An **AI-powered Campus Assistant** developed during **Summer Training 2026** at **United Group of Institutions, Prayagraj**.
+An AI-powered RAG (Retrieval-Augmented Generation) chatbot developed to help UCER students instantly access information from official college documents.
 
-The application is a **Retrieval-Augmented Generation (RAG) chatbot** that helps students quickly access information from official UCER and AKTU documents, including academic regulations, fee structures, hostel information, examination guidelines, bus registration, syllabus, and notices.
+The assistant provides accurate, document-grounded responses for common student queries such as:
+
+- 📚 Syllabus
+- 🏫 Hostel Information
+- 💰 Fee Structure
+- 🚌 Bus Registration
+- 📅 Academic Calendar
+- ✅ Attendance Rules
+- 📝 Examination Guidelines
 
 ---
 
-## 📸 Project Preview
+## ✨ Features
 
-### AI-Powered Campus Assistant
+- AI-powered question answering using Retrieval-Augmented Generation (RAG)
+- Answers generated only from official UCER/AKTU documents
+- OCR support for scanned PDF documents
+- Semantic search for accurate information retrieval
+- Clean and responsive Streamlit interface
+- Easy to extend by adding more documents
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- Streamlit
+- LangChain
+- ChromaDB
+- Google Gemini API
+- Sentence Transformers
+- PyPDF
+- Tesseract OCR
+- Git & GitHub
+
+---
+
+## 📸 Application Preview
 
 ![Campus Assistant](images/chatbot.png)
 
 ---
 
-## 🚀 Features
+## 🚀 Live Demo
 
-- 🤖 AI-powered Campus Assistant
-- 📚 Answers queries using official UCER & AKTU documents
-- 🔍 Retrieval-Augmented Generation (RAG)
-- 📄 Semantic document search
-- 🏫 Academic regulations, fees, hostel & notices
-- 🖥 Interactive Streamlit web application
-- ⚡ Fast and accurate responses
-- 📈 Easily scalable with additional documents
+https://campus-assistant-pyx8c5ft3pb3xp3vwhivyz.streamlit.app
 
----
-
-## 🛠 Tech Stack
-
-| Technology | Purpose |
-|------------|---------|
-| Python | Core Programming Language |
-| Streamlit | Web Application |
-| LangChain | RAG Pipeline |
-| ChromaDB | Vector Database |
-| Google Gemini | Embedding Model |
-| Groq (LLaMA 3.3 70B) | Large Language Model |
-| Sentence Transformers | Semantic Search |
-| PyPDF | PDF Processing |
-| Tesseract OCR | Scanned PDF Support |
+> **Note:** The application is deployed on Streamlit Community Cloud. If inactive, it may take a few seconds to wake up.
 
 ---
 
 ## 📂 Project Structure
 
-```text
-CampusAssistant/
-│
-├── app.py
-├── chatbot.py
-├── build_database.py
-├── requirements.txt
-├── chroma_db/
-├── data/
-├── images/
-└── README.md
 ```
-
----
-
-## 🌐 Live Demo
-
-> https://campus-assistant-pyx8c5ft3pb3xp3vwhivyz.streamlit.app
-
-> **Note:** The application is hosted on Streamlit Community Cloud. The first request may take a few seconds if the app is waking from sleep.
-
----
-
-## 💻 GitHub Repository
-
-https://github.com/areesha-11/campus-assistant
-
----
-
-
-## 🎯 Future Enhancements
-
-- Voice-based interaction
-- Multilingual support
-- ERP integration
-- Mobile application
-- Real-time notice updates
+app.py                 # Streamlit application
+chatbot.py             # RAG chatbot logic
+build_database.py      # Builds vector database
+ocr_pdf.py             # OCR for scanned PDFs
+requirements.txt
+data/
+chroma_db/
+images/
+```
 
 ---
 
@@ -89,10 +72,12 @@ https://github.com/areesha-11/campus-assistant
 
 **Areesha Waseem**
 
-B.Tech (CSE)
+B.Tech Computer Science & Engineering
 
 United College of Engineering & Research, Prayagraj
 
 ---
 
-⭐ If you found this project interesting, consider giving it a star!
+## 📄 License
+
+This project was developed as part of Summer Training 2026 for educational purposes.
